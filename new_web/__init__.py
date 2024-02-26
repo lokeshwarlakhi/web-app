@@ -6,6 +6,7 @@ from .routes import main
 
 def create_app():
     app = Flask(__name__)
+    app.config['SECRET_KEY'] = 'abcd.com'
     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL") #'sqlite:///data.db'
     db.init_app(app)
     
