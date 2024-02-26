@@ -87,5 +87,4 @@ def delete(id):
     user_data = User.query.get(id)
     db.session.delete(user_data)
     db.session.commit()
-    # clovetech4@gmail.com
     return redirect('/admin/home')
